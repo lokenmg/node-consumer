@@ -48,7 +48,7 @@ const ruun = async (uId, oId, rId) => {
   await producer.connect()
   await producer.send({
     topic: 'reactions',
-    message: [{
+    messages: [{
       'value': `{ "userId": "${uId}",  "objectId": "${oId}", "reactionId": "${rId}"}`
     }],
   })
